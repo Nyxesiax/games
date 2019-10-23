@@ -1,0 +1,17 @@
+<table class = table >
+<thead>Liste der Spiele</thead>
+  <tr>
+  <th>ID</th>
+  <th>Bezeichnung</th>
+  <th>Genre</th>
+  <th>FSK</th>
+  <th></th>
+  </tr>
+  <tr *ngFor="let game of game">
+    <td>{{game.id}}</td>
+    <td (click)="showAlert(game)"> {{game.bezeichnung}}</td>
+    <td>{{game.genre}}</td>
+    <td>{{game.fsk}}</td>
+    <button class="btn btn-danger" (click)="del(game)">Delete</button>
+  </tr>
+</table>
